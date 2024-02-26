@@ -12,9 +12,7 @@ const getData = async (url: string): Promise<User[]> => {
 
 getData(COMMENTS_URL)
   .then((data: User[]) => {
-    for (const item of data) {
-      console.log(`ID: ${item.id}, Email: ${item.email}`)
-    }
+    data.forEach(item => console.log(`ID: ${item.id}, Email: ${item.email}`))
   });
 
 /**
